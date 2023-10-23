@@ -20,8 +20,8 @@ h1 {
 
 .gallery {
   display: grid;
-  gap: 2em;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+  margin: 0 auto;
   padding: 5em 2.5em;
 }
 

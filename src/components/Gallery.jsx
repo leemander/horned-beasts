@@ -1,22 +1,15 @@
 import HornedBeast from "./HornedBeast";
-export default function Gallery() {
+export default function Gallery(props) {
   return (
     <section className="gallery">
-      <HornedBeast
-        name="Highland Cow"
-        url="https://images.unsplash.com/photo-1603104147308-73891c6be078"
-        desc="The Highland (Scottish Gaelic: Bò Ghàidhealach; Scots: Heilan coo) is a Scottish breed of rustic cattle. It originated in the Scottish Highlands and the Western Islands of Scotland and has long horns and a long shaggy coat."
-      />
-      <HornedBeast
-        name="Highland Cow"
-        url="https://images.unsplash.com/photo-1603104147308-73891c6be078"
-        desc="The Highland (Scottish Gaelic: Bò Ghàidhealach; Scots: Heilan coo) is a Scottish breed of rustic cattle. It originated in the Scottish Highlands and the Western Islands of Scotland and has long horns and a long shaggy coat."
-      />
-      <HornedBeast
-        name="Highland Cow"
-        url="https://images.unsplash.com/photo-1603104147308-73891c6be078"
-        desc="The Highland (Scottish Gaelic: Bò Ghàidhealach; Scots: Heilan coo) is a Scottish breed of rustic cattle. It originated in the Scottish Highlands and the Western Islands of Scotland and has long horns and a long shaggy coat."
-      />
+      {props.data.map((beast) => (
+        <HornedBeast
+          id={beast._id}
+          name={beast.title}
+          desc={beast.description}
+          url={beast.image_url}
+        />
+      ))}
     </section>
   );
 }
