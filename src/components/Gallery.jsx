@@ -4,7 +4,7 @@ export default function Gallery(props) {
     <section className="gallery">
       {props.data.map((beast) => (
         <HornedBeast
-          id={beast._id}
+          key={beast._id}
           name={beast.title}
           desc={beast.description}
           url={beast.image_url}
