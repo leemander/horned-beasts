@@ -7,7 +7,7 @@ export default function Header() {
     <header>
       <h1
         onClick={() => setStyled((prev) => !prev)}
-        style={{ color: styled ? "hotpink" : "black" }}
+        className={styled ? "styled" : ""}
       >
         Horned Beasts
       </h1>

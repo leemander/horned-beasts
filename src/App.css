@@ -29,6 +29,10 @@ h1 {
   user-select: none;
 }
 
+h1.styled {
+  transform: rotate(180deg);
+}
+
 .gallery {
   display: grid;
   gap: 2em;
@@ -88,5 +92,13 @@ h1 {
 }
 
 footer {
+  cursor: pointer;
   text-align: center;
+  user-select: none;
+}
+
+footer > p.styled {
+  color: hotpink;
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
