@@ -36,8 +36,8 @@ h1 {
 
 .gallery__beast {
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
   position: relative;
   width: 100%;
 }
