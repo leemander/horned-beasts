@@ -78,8 +78,10 @@ h1 {
 }
 
 .gallery__beast > p {
+  align-self: start;
   line-height: 1.5;
   max-width: 60ch;
+  text-align: center;
 }
 
 footer {
