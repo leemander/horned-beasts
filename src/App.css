@@ -28,6 +28,7 @@ h1 {
 
 .gallery {
   display: grid;
+  gap: 2em;
   grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
   margin: 0 auto;
   padding: 5em 2.5em;
@@ -38,26 +39,15 @@ h1 {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 
-.gallery__beast > h2 {
-  text-align: center;
-}
-
-.gallery__beast > img {
-  aspect-ratio: 1;
-  border: 1em solid saddlebrown;
-  border-radius: 0.66em;
-  display: block;
-  height: 20rem;
-  margin: 1em auto;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.gallery__beast > p {
-  line-height: 1.5;
-  max-width: 60ch;
+.gallery__beast > header {
+  align-items: center;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .beast__fav-button {
@@ -74,9 +64,22 @@ h1 {
   font-weight: 700;
   height: 80px;
   padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+}
+
+.gallery__beast > img {
+  aspect-ratio: 1;
+  border: 1em solid saddlebrown;
+  border-radius: 0.66em;
+  display: block;
+  height: 100%;
+  margin: 1em auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.gallery__beast > p {
+  line-height: 1.5;
+  max-width: 60ch;
 }
 
 footer {
