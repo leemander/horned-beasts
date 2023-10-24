@@ -22,9 +22,7 @@ body {
   min-height: 100dvh;
 }
 
-h1,
-h2 {
-  font-weight: 600;
+h1 {
   text-align: center;
 }
 
@@ -36,9 +34,10 @@ h2 {
 }
 
 .gallery__beast {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
 }
 
 .gallery__beast > h2 {
@@ -59,6 +58,25 @@ h2 {
 .gallery__beast > p {
   line-height: 1.5;
   max-width: 60ch;
+}
+
+.beast__fav-button {
+  aspect-ratio: 1;
+  background-color: transparent;
+  background-image: url("./assets/Heart-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  color: black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 80px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 footer {
