@@ -45,7 +45,6 @@ h1.styled {
   align-items: center;
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
-  position: relative;
   width: 100%;
 }
 
@@ -103,5 +102,37 @@ footer > p.styled {
 }
 
 .beast__modal {
-  display: block;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  border: 0;
+  color: #fff;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.beast__modal > h3 {
+  margin: 0;
+}
+
+.beast__modal > button {
+  aspect-ratio: 1;
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  height: 50px;
+}
+
+.beast__modal > img {
+  margin: auto;
+  max-height: 75dvh;
+  min-width: 50dvw;
+  object-fit: cover;
 }

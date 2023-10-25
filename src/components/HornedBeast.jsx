@@ -11,7 +11,6 @@ export default function HornedBeast({ name, url, desc }) {
 
   function toggleModal() {
     setShowModal(!showModal);
-    console.log(showModal);
   }
 
   return (
@@ -23,7 +22,6 @@ export default function HornedBeast({ name, url, desc }) {
         </button>
       </header>
       <img src={url} alt={name} onClick={toggleModal} />
-      {/* <p>{desc}</p> */}
       {showModal && (
         <Modal toggleModal={toggleModal} name={name} url={url} desc={desc} />
       )}
