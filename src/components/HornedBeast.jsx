@@ -1,16 +1,10 @@
 import { useState } from "react";
-import Modal from "./Modal";
 
-export default function HornedBeast({ name, url, desc }) {
+export default function HornedBeast({ name, url, chooseBeast }) {
   const [faves, setFaves] = useState(0);
-  const [showModal, setShowModal] = useState(false);
 
   function increaseFaves() {
     setFaves(faves + 1);
-  }
-
-  function toggleModal() {
-    setShowModal(!showModal);
   }
 
   return (
@@ -21,10 +15,7 @@ export default function HornedBeast({ name, url, desc }) {
           {faves}
         </button>
       </header>
-      <img src={url} alt={name} onClick={toggleModal} />
-      {showModal && (
-        <Modal toggleModal={toggleModal} name={name} url={url} desc={desc} />
-      )}
+      <img src={url} alt={name} onClick={() => chooseBeast(name)} />
     </article>
   );
 }

@@ -1,18 +1,40 @@
+import { useState } from "react";
+
+import data from "./data.json";
+
 import "./App.css";
 import Header from "./components/Header";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
-
-import data from "./data.json";
+import Modal from "./components/Modal";
 
 function App() {
+  const [chosenBeast, setChosenBeast] = useState(null);
+  function chooseBeast(name) {
+    let newChosenBeast = {};
+    data.forEach((beast) => {
+      if (beast.title === name) {
+        newChosenBeast = beast;
+      }
+    });
+    setChosenBeast(newChosenBeast);
+  }
+
   return (
     <>
       <Header />
       <main>
-        <Gallery data={data} />
+        <Gallery data={data} chooseBeast={chooseBeast} />
       </main>
       <Footer />
+      {chosenBeast && (
+        <Modal
+          setChosenBeast={setChosenBeast}
+          url={chosenBeast.image_url}
+          name={chosenBeast.title}
+          desc={chosenBeast.description}
+        />
+      )}
     </>
   );
 }

@@ -1,12 +1,13 @@
 import HornedBeast from "./HornedBeast";
-export default function Gallery(props) {
+export default function Gallery({ data, chooseBeast }) {
   return (
     <section className="gallery">
-      {props.data.map((beast) => (
+      {data.map((beast) => (
         <HornedBeast
+          desc={beast.description}
           key={beast._id}
           name={beast.title}
-          desc={beast.description}
+          chooseBeast={chooseBeast}
           url={beast.image_url}
         />
       ))}
