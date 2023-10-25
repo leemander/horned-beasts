@@ -6,7 +6,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
-import Modal from "./components/Modal";
+import SelectedBeast from "./components/SelectedBeast";
 
 function App() {
   const [chosenBeast, setChosenBeast] = useState(null);
@@ -28,7 +28,7 @@ function App() {
       </main>
       <Footer />
       {chosenBeast && (
-        <Modal
+        <SelectedBeast
           setChosenBeast={setChosenBeast}
           url={chosenBeast.image_url}
           name={chosenBeast.title}
