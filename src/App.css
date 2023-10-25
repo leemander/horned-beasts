@@ -117,7 +117,8 @@ footer > p.styled {
 }
 
 .beast__modal > h3 {
-  margin: 0;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .beast__modal > button {
@@ -135,4 +136,9 @@ footer > p.styled {
   max-height: 75dvh;
   min-width: 50dvw;
   object-fit: cover;
+}
+
+.beast__modal > p {
+  margin: 0 auto;
+  width: fit-content;
 }
