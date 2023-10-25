@@ -8,6 +8,13 @@ img {
   max-width: 100%;
 }
 
+.prevent-scrolling {
+  height: 100dvh;
+  position: fixed;
+  width: 100dvw;
+  overflow: hidden;
+}
+
 body {
   background-color: #b4da55;
   font-family: "Playpen Sans", cursive;

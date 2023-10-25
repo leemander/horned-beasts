@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className={chosenBeast ? "prevent-scrolling" : ""}>
       <Header />
       <main>
         <Gallery data={data} chooseBeast={chooseBeast} />
@@ -35,7 +35,7 @@ function App() {
           desc={chosenBeast.description}
         />
       )}
-    </>
+    </div>
   );
 }
 
