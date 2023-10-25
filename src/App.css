@@ -81,7 +81,6 @@ h1.styled {
   height: 100%;
   margin: 1em auto;
   object-fit: cover;
-  z-index: -1;
 }
 
 .gallery__beast > p {
@@ -101,4 +100,8 @@ footer > p.styled {
   color: hotpink;
   text-decoration: underline;
   text-decoration-style: wavy;
+}
+
+.beast__modal {
+  display: block;
 }
