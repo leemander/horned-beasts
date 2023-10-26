@@ -7,12 +7,12 @@ import Header from "./components/Header";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import SelectedBeast from "./components/SelectedBeast";
-import SearchForm from "./components/SearchForm";
+import Form from "./components/Form";
 
 function App() {
   const [chosenBeast, setChosenBeast] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(null);
+  const [formData, setFormData] = useState({});
 
   function chooseBeast(name) {
     let newChosenBeast = {};
@@ -25,13 +25,13 @@ function App() {
   }
 
   function handleChange(e) {
-    setSearchTerm(e.target.value);
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     const newFilteredData = data.filter((item) => {
-      if (item.keyword === searchTerm) {
+      if (item.keyword === formData.searchTerm) {
         return item;
       }
     });
@@ -42,11 +42,11 @@ function App() {
     <div className={chosenBeast ? "prevent-scrolling" : ""}>
       <Header />
       <main>
-        <SearchForm
+        <Form
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          searchTerm={searchTerm}
-          setFilteredData={setFilteredData}
+          formData={formData}
+          setFormData={setFormData}
         />
         <Gallery
           data={filteredData ? filteredData : data}

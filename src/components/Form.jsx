@@ -1,17 +1,22 @@
-export default function SearchForm({
+export default function Form({
   handleChange,
   handleSubmit,
-  searchTerm,
-  setFilteredData,
+  formData,
+  setFormData,
 }) {
   function resetFilters(e) {
     e.preventDefault();
-    setFilteredData(null);
+    setFormData({});
   }
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
-      <input type="text" onChange={(e) => handleChange(e)} value={searchTerm} />
+      <input
+        type="text"
+        name="searchTerm"
+        onChange={(e) => handleChange(e)}
+        value={formData.searchTerm}
+      />
       <button type="submit">Search</button>
       <button onClick={(e) => resetFilters(e)}>Reset</button>
     </form>
