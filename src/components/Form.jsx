@@ -19,7 +19,7 @@ export default function Form({
           <input
             type="text"
             name="searchTerm"
-            id="searchTerm"
+            id="search-term"
             onChange={(e) => handleChange(e)}
             value={formData.searchTerm}
           />
