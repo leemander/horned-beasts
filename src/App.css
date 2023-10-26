@@ -55,6 +55,58 @@ form {
   padding: 0 2.5em;
 }
 
+.form__inputs {
+  align-items: center;
+  display: flex;
+  gap: 1em;
+}
+
+.form__inputs > label {
+  display: flex;
+  gap: 1em;
+}
+
+.form__inputs input,
+.form__inputs select {
+  border: 0;
+  border-radius: 1000em;
+  padding: 0.5em;
+}
+
+.form__inputs input:focus,
+.form__inputs select:focus {
+  outline-color: saddlebrown;
+}
+
+.form__buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.form__buttons > button {
+  background-color: skyblue;
+  border: 0;
+  border-radius: 1000em;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  width: 10em;
+}
+
+.form__buttons > button:is(:hover, :focus-visible) {
+  scale: 0.95;
+}
+
+.form__buttons > button:last-of-type {
+  background-color: tomato;
+}
+
 .gallery__beast {
   align-items: center;
   display: grid;

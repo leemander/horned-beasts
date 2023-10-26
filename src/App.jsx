@@ -31,9 +31,13 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     const newFilteredData = data.filter((item) => {
-      if (item.keyword === formData.searchTerm) {
-        return item;
+      if (formData.horns && item.horns !== +formData.horns) {
+        return false;
       }
+      if (formData.searchTerm && item.keyword !== formData.searchTerm) {
+        return false;
+      }
+      return item;
     });
     setFilteredData(newFilteredData);
   }
@@ -47,6 +51,7 @@ function App() {
           handleSubmit={handleSubmit}
           formData={formData}
           setFormData={setFormData}
+          setFilteredData={setFilteredData}
         />
         <Gallery
           data={filteredData ? filteredData : data}
