@@ -18,6 +18,7 @@ img {
 
 body {
   background-color: #b4da55;
+  color: saddlebrown;
   font-family: "Playpen Sans", cursive;
   font-size: 1.1rem;
   font-weight: 400;
@@ -50,15 +51,70 @@ form {
 .gallery {
   display: grid;
   gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
-  margin: 0 auto;
-  padding: 0 2.5em;
+  grid-template-columns: repeat(auto-fit, minmax(min(25em, 100%), 1fr));
+  margin: 3em auto;
+  width: calc(100% - 5em);
+}
+
+.form__inputs {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.form__inputs > label {
+  display: flex;
+  gap: 1em;
+}
+
+.form__inputs input,
+.form__inputs select {
+  border: 0;
+  border-radius: 1000em;
+  padding: 0.5em;
+}
+
+.form__inputs input:focus,
+.form__inputs select:focus {
+  outline-color: chocolate;
+}
+
+.form__buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.form__buttons > button {
+  background-color: skyblue;
+  border: 0;
+  border-radius: 1000em;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  width: 10em;
+}
+
+.form__buttons > button:is(:hover, :focus-visible) {
+  scale: 0.95;
+}
+
+.form__buttons > button:last-of-type {
+  background-color: tomato;
 }
 
 .gallery__beast {
   align-items: center;
+  background-color: pink;
+  border-radius: 1em;
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr;
   width: 100%;
 }
 
@@ -67,6 +123,7 @@ form {
   display: flex;
   gap: 1em;
   justify-content: space-between;
+  padding: 0 1em;
   width: 100%;
 }
 
@@ -88,12 +145,13 @@ form {
 
 .gallery__beast > img {
   aspect-ratio: 1;
-  border: 1em solid saddlebrown;
+  border: 1em solid bisque;
   border-radius: 0.66em;
   display: block;
   height: 100%;
-  margin: 1em auto;
+  margin: 0 auto;
   object-fit: cover;
+  width: 100%;
 }
 
 .gallery__beast > p {
