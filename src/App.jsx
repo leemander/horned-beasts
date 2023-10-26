@@ -48,7 +48,6 @@ function App() {
       <main>
         <Form
           handleChange={handleChange}
-          // handleSubmit={handleSubmit}
           formData={formData}
           setFormData={setFormData}
           setFilteredData={setFilteredData}
