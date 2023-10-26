@@ -30,7 +30,6 @@ function App() {
   }
 
   function filterData(formData) {
-    console.log(formData);
     const newFilteredData = data.filter((item) => {
       if (formData.horns && item.horns !== +formData.horns) {
         return false;
@@ -42,20 +41,6 @@ function App() {
     });
     setFilteredData(newFilteredData);
   }
-
-  // function handleSubmit(e) {
-  //   // e.preventDefault();
-  //   const newFilteredData = data.filter((item) => {
-  //     if (formData.horns && item.horns !== +formData.horns) {
-  //       return false;
-  //     }
-  //     if (formData.searchTerm && item.keyword !== formData.searchTerm) {
-  //       return false;
-  //     }
-  //     return item;
-  //   });
-  //   setFilteredData(newFilteredData);
-  // }
 
   return (
     <div className={chosenBeast ? "prevent-scrolling" : ""}>
