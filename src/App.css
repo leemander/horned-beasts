@@ -51,10 +51,9 @@ form {
 .gallery {
   display: grid;
   gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(25em, 100%), 1fr));
   margin: 3em auto;
-  max-width: 1650px;
-  width: calc(100% - 3em);
+  width: calc(100% - 5em);
 }
 
 .form__inputs {
