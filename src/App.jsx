@@ -12,7 +12,7 @@ import Form from "./components/Form";
 function App() {
   const [chosenBeast, setChosenBeast] = useState(null);
   const [filteredData, setFilteredData] = useState(null);
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({ searchTerm: "", horns: "" });
 
   function chooseBeast(name) {
     let newChosenBeast = {};

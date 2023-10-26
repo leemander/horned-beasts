@@ -6,7 +6,7 @@ export default function Form({
 }) {
   function resetFilters(e) {
     e.preventDefault();
-    setFormData({});
+    setFormData({ searchTerm: "", horns: "" });
   }
 
   return (
