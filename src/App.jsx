@@ -31,6 +31,7 @@ function App() {
 
   function filterData(formData) {
     const newFilteredData = data.filter((item) => {
+      //https://stackoverflow.com/a/69822649
       if (formData.horns && item.horns !== +formData.horns) {
         return false;
       }
