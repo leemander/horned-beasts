@@ -26,10 +26,11 @@ function App() {
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    filterData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function filterData(formData) {
+    console.log(formData);
     const newFilteredData = data.filter((item) => {
       if (formData.horns && item.horns !== +formData.horns) {
         return false;
@@ -42,13 +43,27 @@ function App() {
     setFilteredData(newFilteredData);
   }
 
+  // function handleSubmit(e) {
+  //   // e.preventDefault();
+  //   const newFilteredData = data.filter((item) => {
+  //     if (formData.horns && item.horns !== +formData.horns) {
+  //       return false;
+  //     }
+  //     if (formData.searchTerm && item.keyword !== formData.searchTerm) {
+  //       return false;
+  //     }
+  //     return item;
+  //   });
+  //   setFilteredData(newFilteredData);
+  // }
+
   return (
     <div className={chosenBeast ? "prevent-scrolling" : ""}>
       <Header />
       <main>
         <Form
           handleChange={handleChange}
-          handleSubmit={handleSubmit}
+          // handleSubmit={handleSubmit}
           formData={formData}
           setFormData={setFormData}
           setFilteredData={setFilteredData}

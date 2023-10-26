@@ -33,7 +33,7 @@ export default function Form({
             onChange={(e) => handleChange(e)}
             value={formData.horns}
           >
-            <option value="any">any</option>
+            <option value="">any</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -42,7 +42,6 @@ export default function Form({
         </label>
       </div>
       <div className="form__buttons">
-        <button type="submit">Search</button>
         <button onClick={(e) => resetFilters(e)}>Reset</button>
       </div>
     </form>

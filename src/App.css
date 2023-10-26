@@ -152,6 +152,7 @@ form {
   height: 100%;
   margin: 0 auto;
   object-fit: cover;
+  width: 100%;
 }
 
 .gallery__beast > p {
