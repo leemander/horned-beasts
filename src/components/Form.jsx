@@ -1,6 +1,5 @@
 export default function Form({
   handleChange,
-  handleSubmit,
   formData,
   setFormData,
   setFilteredData,
@@ -12,7 +11,7 @@ export default function Form({
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form>
       <div className="form__inputs">
         <label htmlFor="search-term">
           Search:
